@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,600;0,700;1,100;1,200;1,600&display=swap');
+/*    font-family: 'Merriweather', serif;
+
+    font-family: 'Oleo Script', cursive;
+
+    font-family: 'Oleo Script Swash Caps', cursive;
+
+    font-family: 'Poppins', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Oleo+Script&family=Oleo+Script+Swash+Caps&family=Poppins:ital,wght@0,100;0,200;0,600;0,700;1,100;1,200;1,600&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+
+/*    font-family: 'Merriweather', serif;
+
+    font-family: 'Oleo Script', cursive;
+
+    font-family: 'Oleo Script Swash Caps', cursive;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Roboto', sans-serif;*/
+/*Koppel het CSS-bestand aan `index.html` (<link rel="stylesheet" type="text/css" href="../.css");
+
+- [ ] Zet alvast drie semantische elementen (`<header>`-, `<main>`- en `<footer>`) klaar in de body van het
+                                                                                   HTML-bestand, zodat het duidelijk is hoe de pagina in stukjes verdeeld gaat worden;
+- [ ] Voorzie jouw CSS-bestand van een complete CSS-reset;*/
+/**/
+/*=ctrl /
+      ctr f voor zoeken in css
+      id (#) kan 1 keer voor komen
+      class (.) meerdere
+      browser(rechtermous -> insecteren) - inspecteren/tijdelijke aanpassing code
+                                                -element selecteren zie stijlen:  aan uit zetten
+                                                -stijlen/nieuwe stijlen testen
+      ctrl u voor html code
+      px altijd deelbaar door 4
+      door een foto in een span(inline element) of div(block element) een height en width te geven van 100% zal deze mee groeien met de parentelement
+      gebruik div en span icm flexbox om elementen uit te lijnen
+      met flex-basic:; beperkte je een element
+*/
+/*///
+Table of Contents:
+    1. link to the repository
+    /*git checkout -b uitwerkingen
+
+    2. Global Styles
+    3. Typografie*/
+/*@import url(*!)*/
+/*  4. roots styles*/
+:root {
+    --Paars #5722CD;
+    --Blauw #4845E4;
+    --Roze #ED4385;
+    --Zwart #0C0C0C; /*(voor standaard tekst);*/
+    --Lichtpaars #F2F0FF; /*(voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen*/
+    --Lichtgrijs #F3F6F9; /*(voor de achtergrond van de projecten)*/
+}
+
+/*
+Grijs #7A7A7A (voor de service-tegel tekst);
+kleur selectie
+grijs #899CA0
+donkergroen #1C2B32*/
+/*
+  5. utility
+  6. Areas
+      6.1 Header
+      5.2 area 2
+      6.3 area 3
+      6.4 area 4
+      6.5 area 5
+  7. @media
+  8 Header
+///*/
+
+
+/*///1. Global Styles///*/
+/*om basis opmaak van HTML op te heven*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.page-container{
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+body {
+
+
+}
+
+
+/*///2. Typography///*/
+h1, h2, h3, h4, h5, h6, div, span {
+    font-family: Georgia, serif, "Times New Roman", Times, serif;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 1.5em; /*16px is de standaard van "em"*/
+}
+
+p,
+block,
+link,
+label,
+fieldset,
+section,
+input,
+select,
+textarea,
+option,
+legend,
+table,
+tfoot,
+thead,
+tr,
+th {
+
+}
+
+/*///3. roots style///*/
+:root {
+    --primary-color: #007bff; /* Definieer een aangepaste CSS-variabele voor de primaire kleur */
+    --font-family: Arial, sans-serif; /* Stel het standaardlettertype in voor de hele pagina */
+    --font-size: 16px; /* Stel de standaardlettergrootte in voor de hele pagina */
+    --background-color: #f1f1f1; /* Stel de standaardachtergrondkleur in voor de hele pagina */
+}
+
+/*///4. utility///*/
+.debug { /*<element>class=""debug"*/
+    border-style: 2px solid red;
+}
+
+/*///5. Areas///*/
+footer {
+
+}
+
+fieldset {
+}
+
+
+button {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px, 16px; /**/
+}
+
+button-primary { /*class="button button-primary"*/
+
+}
+
+/*button + button { !*als item 2 is cibeling van item 1 dan *!*/
+/*    margin-left: 16px;*/
+/*}*/
+
+/*inpute {*/
+/*    width: 100%;*/
+/*    display: block /inline/ 100%; !*ipv flexbox*!*/
+/*}*/
+
+/*/8 Header/*/
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: blue solid 3px;
+}
+
+.header-nav__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    padding: 0 20px;
+
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: red solid 3px;
+
+}
+
+.header-article {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    padding: 0 20px;
+    border: purple solid 3px;
+}
+
+/*/7 @media/*/
